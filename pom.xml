@@ -18,9 +18,9 @@
     <groupId>com.uber</groupId>
     <artifactId>h3</artifactId>
     <packaging>jar</packaging>
-    <version>3.1.1-SNAPSHOT</version>
+    <version>3.1.1.0</version>
     <name>h3</name>
-    <url>https://github.com/uber/h3-java</url>
+    <url>https://github.com/yoshiki-henmi/h3-java</url>
     <description>Java bindings for H3, a hierarchical hexagonal geospatial indexing system.</description>
 
     <licenses>
@@ -268,7 +268,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
