@@ -111,7 +111,7 @@ public final class H3CoreLoader {
 
         if (libraryFile == null) {
             final String dirName = String.format("%s-%s", os.getDirName(), arch);
-            final String libName = String.format("libh3-java%s", os.getSuffix());
+            final String libName = String.format("libs/libh3-java%s", os.getSuffix());
 
             final File newLibraryFile = File.createTempFile("libh3-java", os.getSuffix());
 
