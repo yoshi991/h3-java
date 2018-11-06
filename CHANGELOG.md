@@ -6,9 +6,12 @@ The public API of this library consists of the public functions declared in
 file [H3Core.java](./src/main/java/com/uber/h3core/H3Core.java), and support
 for the Linux x64 and Darwin x64 platforms.
 
-## [Unreleased]
+## [3.2.0] - 2018-10-16
 ### Added
 - Support for building on Windows. (#26)
+- `experimentalH3ToLocalIj` and `experimentalLocalIjToH3` functions. (#32)
+### Changed
+- Updated the core library to v3.2.0. (#32)
 ### Fixed
 - Don't require a C++ compiler. (#30)
 

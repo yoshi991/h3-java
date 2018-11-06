@@ -18,7 +18,7 @@
     <groupId>com.uber</groupId>
     <artifactId>h3</artifactId>
     <packaging>jar</packaging>
-    <version>3.1.1.0</version>
+    <version>3.2.1-SNAPSHOT</version>
     <name>h3</name>
     <url>https://github.com/yoshiki-henmi/h3-java</url>
     <description>Java bindings for H3, a hierarchical hexagonal geospatial indexing system.</description>
@@ -69,6 +69,10 @@
 
         <h3.git.remote>https://github.com/uber/h3.git</h3.git.remote>
         <h3.use.docker>true</h3.use.docker>
+        <!-- Used for passing additional arguments to surefire when using JaCoCo -->
+        <h3.additional.argLine />
+
+        <argLine>${h3.additional.argLine}</argLine>
     </properties>
 
     <profiles>
