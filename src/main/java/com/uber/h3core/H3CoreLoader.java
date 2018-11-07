@@ -32,6 +32,7 @@ public final class H3CoreLoader {
     // Supported H3 architectures
     static final String ARCH_X64 = "x64";
     static final String ARCH_X86 = "x86";
+    static final String ARCH_ARM = "arm";
     static final String ARCH_ARM64 = "arm64";
 
     private static volatile File libraryFile = null;
@@ -179,19 +180,7 @@ public final class H3CoreLoader {
     static final OperatingSystem detectOs(String javaVendor, String osName) {
         // Detecting Android using the properties from:
         // https://developer.android.com/reference/java/lang/System.html
-        if (javaVendor.toLowerCase().contains("android")) {
-            return OperatingSystem.ANDROID;
-        }
-
-        String javaOs = osName.toLowerCase();
-        if (javaOs.contains("mac")) {
-            return OperatingSystem.DARWIN;
-        } else if (javaOs.contains("win")) {
-            return OperatingSystem.WINDOWS;
-        } else {
-            // Only other supported platform
-            return OperatingSystem.LINUX;
-        }
+        return OperatingSystem.ANDROID;
     }
 
     /**
@@ -212,7 +201,7 @@ public final class H3CoreLoader {
         } else if (osArch.equals("aarch64")) {
             return ARCH_ARM64;
         } else {
-            return osArch;
+            return ARCH_ARM;
         }
     }
 }
