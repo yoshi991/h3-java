@@ -180,7 +180,19 @@ public final class H3CoreLoader {
     static final OperatingSystem detectOs(String javaVendor, String osName) {
         // Detecting Android using the properties from:
         // https://developer.android.com/reference/java/lang/System.html
-        return OperatingSystem.ANDROID;
+        if (javaVendor.toLowerCase().contains("android")) {
+            return OperatingSystem.ANDROID;
+        }
+
+        String javaOs = osName.toLowerCase();
+        if (javaOs.contains("mac")) {
+            return OperatingSystem.DARWIN;
+        } else if (javaOs.contains("win")) {
+            return OperatingSystem.WINDOWS;
+        } else {
+            // Only other supported platform
+            return OperatingSystem.LINUX;
+        }
     }
 
     /**
